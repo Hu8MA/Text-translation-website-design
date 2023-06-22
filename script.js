@@ -98,11 +98,11 @@ document.getElementById('t2').textContent = translatedText;
 ///////////////////////////////////////////////////
 
 
-/* DeepL API
-const translateText = async (text) => {
-  const apiKey = 'YOUR_API_KEY';  
+// DeepL API
+const translateText2 = async (text) => {
+  const apiKey2 = 'YOUR_API_KEY';  
 
-  const url = 'https://api.deepl.com/v2/translate';
+  const url2 = 'https://api.deepl.com/v2/translate';
   const data = {
     text: text,
     target_lang: d  
@@ -110,7 +110,7 @@ const translateText = async (text) => {
   };
 
   try {
-    const response = await fetch(url, {
+    const response2 = await fetch(url, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
@@ -118,10 +118,10 @@ const translateText = async (text) => {
       body: new URLSearchParams(data),
     });
 
-    const responseData = await response.json();
+    const responseData2 = await response.json();
 
     if (responseData && responseData.translations && responseData.translations.length > 0) {
-      const translatedText = responseData.translations[0].text;
+      const translatedText2 = responseData.translations[0].text;
       console.log(`Translated Text: ${translatedText}`);
       document.getElementById('t2').value=translatedText;
 
@@ -134,21 +134,21 @@ const translateText = async (text) => {
 };
 
 // Usage
-const textToTranslate =  document.getElementById('texttranslationFrom').value;
+const textToTranslate2 =  document.getElementById('texttranslationFrom').value;
 translateText(textToTranslate);
 
-*/
+ 
 
 //Google Api (is not free)
 
-/*
-function translateText() {
-  const textToTranslate = document.getElementById('texttranslationFrom').value;
-  const targetLanguage = b;  
+ 
+function translateText3() {
+  const textToTranslate3 = document.getElementById('texttranslationFrom').value;
+  const targetLanguage3 = b;  
 
-  const apiKey = 'YOUR_API_KEY';  
+  const apiKey3 = 'YOUR_API_KEY';  
 
-  const url = `https://translation.googleapis.com/language/translate/v2?key=${apiKey}`;
+  const url3 = `https://translation.googleapis.com/language/translate/v2?key=${apiKey}`;
   const data = {
     q: textToTranslate,
     target: targetLanguage,
@@ -163,11 +163,11 @@ function translateText() {
   })
     .then(response => response.json())
     .then(data => {
-      const translatedText = data.data.translations[0].translatedText;
+      const translatedText3 = data.data.translations[0].translatedText;
      document.getElementById('t2').value=translatedText;
     })
     .catch(error => {
       console.error('Translation error:', error);
     });
 }
-*/
+ 
