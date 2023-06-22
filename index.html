@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Translation Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+  
+  <div>
+    <div id="notification" ></div>
+
+    <div class="lang">
+
+      <p id="lan1">English</p>
+      
+      <button id="tran" onclick="changelang()">>></button>
+
+      
+      <p id="lan2">Arabic</p>
+
+
+    </div>
+    <div class="photoProfile">
+       <img id="logo" src="sfsdvc.jpg" alt="Logo"> 
+
+       <label for="uplodePhoto" class="image-input">
+        <img src="photo.png" alt="Upload Image" id="photo">
+        <input type="file" id="imageUpload" accept="image/*" onchange="handleImageUpload(event)">
+      </label>
+      <!-- <button id="uplodePhoto" title="Uplode Photo">  <img id="photo" src="photo.png" alt=""></button> -->
+
+    
+
+    </div> 
+
+  </div>
+  <button onclick="clearall()" id="btnClear" title="Clear All text" ><img src="clear-format.png" id="clear"/></button>
+
+  <div class="translation">
+
+
+      <div class="translationFrom" >
+       
+        <form class="form">
+
+          <textarea   id="texttranslationFrom" placeholder="Enter text to translate" ></textarea>
+          <button id="submitBtn"   title="click to make translate">Translate</button>
+        </form>
+    
+      </div>
+
+      <div class="translationTo">
+        <textarea  id="t2" > </textarea>
+
+        <button id="copy" title="click to make copy" onclick="copyText()">Copy</button>
+      </div>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
